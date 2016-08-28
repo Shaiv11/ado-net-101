@@ -1,13 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="DbExampleApp1._default1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="app2.aspx.cs" Inherits="DbExampleApp1.app2" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title> Student Search in Database </title>
+    <title> ADO.NET 101 Application #2 </title>
 </head>
 <body>
-    
     <style>
         body
         {
@@ -32,23 +31,17 @@
             <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
             <StaticSelectedStyle BackColor="#507CD1" />
         </asp:Menu>
-    <h1>Search for Student : </h1>
-
-        <asp:RegularExpressionValidator
-            ID="RegularExpressionValidator1"
-             runat="server"
-             ControlToValidate ="TextBox1"
-             ValidationExpression ="^[a-zA-Z'.\s]{1,40}$"
-             ErrorMessage="Invalid Name ! Please, try again." Font-Bold="True" Font-Italic="False" Font-Underline="True" ForeColor="#FF3300"></asp:RegularExpressionValidator>
-        
-        <br />
+        <h3>Find No. of faculties in FoT, DDU, Nadiad</h3>
+        Dept : <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
 
         <br />
-        <asp:TextBox ID="TextBox1" runat="server" placeholder="Student's name"></asp:TextBox>
-        
-        <asp:Button ID="Button1" runat="server" Text="Search" BackColor="#FFFFCC" Font-Names="Segoe UI Emoji" OnClick="Button1_Click" />
+        <asp:Button ID="Button1" runat="server" Text="Find" OnClick="Button1_Click" BackColor="#FFFFCC" Font-Names="Segoe UI Emoji"/>
+        <br />
+        <br />
+        No. Of Faculties :
+        <asp:Label ID="Label1" runat="server"></asp:Label>
 
-        &nbsp;</div>
+    </div>
     </form>
 </body>
 </html>
